@@ -1,0 +1,17 @@
+{
+  "name": "circleback",
+  "owner": {
+    "name": "Circleback",
+    "email": "support@circleback.ai"
+  },
+  "metadata": {
+    "description": "Bring context from Circleback into Cursor. Search and access meeting notes, transcripts, calendar events, emails, people, companies, and more."
+  },
+  "plugins": [
+    {
+      "name": "circleback",
+      "source": "plugins/circleback",
+      "description": "Bring context from Circleback into Cursor. Search and access meeting notes, transcripts, calendar events, emails, people, companies, and more."
+    }
+  ]
+}

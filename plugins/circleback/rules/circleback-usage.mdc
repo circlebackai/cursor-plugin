@@ -1,0 +1,37 @@
+---
+description: Guidelines for using Circleback MCP tools to access meeting notes, transcripts, calendar events, emails, people, and companies
+alwaysApply: false
+---
+
+# Circleback MCP Tools
+
+Circleback provides MCP tools for accessing meeting and conversation data.
+
+## Available Tools
+
+### Meetings
+- **SearchMeetings** — Find meetings by search term, date range, tags, attendee profiles, or domains. Returns relevant excerpts based on intent. Paginated (25 per page).
+- **ReadMeetings** — Fetch detailed info for up to 100 meeting IDs: name, notes, attendees, action items, AI insights, tags, status, duration.
+- **GetTranscriptsForMeetings** — Get full transcripts for up to 50 meeting IDs, with timestamped speaker segments.
+- **SearchTranscripts** — Search transcript text for a term. Returns matching chunks with timestamps and meeting context. Call multiple times for distinct search terms.
+
+### Calendar
+- **SearchCalendarEvents** — Get calendar events from connected calendars. Includes title, date, organizer, attendees, meeting platform/link, join status. Filter by date range. Paginated (25 per page).
+
+### Email
+- **SearchEmails** — Search connected email accounts. Supports filters: `from:`, `to:`, `participant:`, `before:`, `after:`. Paginated (10 threads per page).
+
+### People & Companies
+- **FindProfiles** — Find people profiles by name.
+- **FindDomains** — Find company domains by search term.
+
+### Help
+- **SearchSupportArticles** — Search Circleback support articles.
+
+## Usage Tips
+
+- Most tools require an `intent` parameter — describe why you're making the call so results are tailored.
+- Use `SearchMeetings` with `pageIndex: 0` first, then paginate if needed.
+- Use `FindProfiles` or `FindDomains` first to get IDs/domains, then pass those as filters to search tools.
+- For transcript search, call `SearchTranscripts` separately for each distinct term.
+- Date parameters use ISO format: `YYYY-MM-DD`.

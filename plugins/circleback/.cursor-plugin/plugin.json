@@ -1,0 +1,17 @@
+{
+  "name": "circleback",
+  "displayName": "Circleback",
+  "version": "0.1.0",
+  "description": "Bring context from Circleback into Cursor. Search and access meeting notes, transcripts, calendar events, emails, people, companies, and more.",
+  "author": {
+    "name": "Circleback",
+    "email": "support@circleback.ai"
+  },
+  "homepage": "https://circleback.ai",
+  "license": "MIT",
+  "logo": "assets/logo.svg",
+  "keywords": ["circleback", "mcp", "meetings", "notes", "conversations", "transcripts", "calendar", "emails", "knowledge base"],
+  "category": "productivity",
+  "rules": "./rules/",
+  "mcpServers": "./mcp.json"
+}
